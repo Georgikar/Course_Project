@@ -3,6 +3,7 @@ package com.course.tests;
 import base.TestUtil;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
+import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -15,8 +16,9 @@ import java.util.List;
 
 public class UnsuccessfulLogin extends TestUtil {
 
+
     @DataProvider(name = "userList")
-    public static Object[][] readUsersFromCsv() throws IOException, CsvException {
+    public static Object[] @NotNull [] readUsersFromCsv() throws IOException, CsvException {
         try (CSVReader csvReader = new CSVReader(new FileReader("src/test/resources/userList.csv"))) {
             List<String[]> csvData = csvReader.readAll();
             Object[][] csvDataObject = new Object[csvData.size()][2];
