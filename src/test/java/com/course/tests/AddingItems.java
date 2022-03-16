@@ -33,9 +33,11 @@ public class AddingItems extends TestUtil {
         LoginPage loginPage = new LoginPage(driver);
         ProductsPage productPage = loginPage.login(userName,password);
         productPage.addToCartByProductName("backpack");
+        productPage.addToCartByProductName("bike-light");
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(ProductsPage.;
+        softAssert.assertNotEquals(productPage.getNumbersInTheCart(),2);
+
     }
 
 
