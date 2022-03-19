@@ -1,5 +1,6 @@
 package com.course.tests;
 
+import Pages.CheckOutPage;
 import Pages.LoginPage;
 import Pages.ProductsPage;
 import base.TestUtil;
@@ -37,5 +38,8 @@ public class CheckingOut extends TestUtil {
             btnShoppingCart.click();
             WebElement btnCheckOut = driver.findElement(By.id("checkout"));
             btnCheckOut.click();
+            CheckOutPage checkingOut=new CheckOutPage(driver);
+
+
         }
     }

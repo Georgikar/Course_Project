@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CheckOut {
+public class CheckOutPage {
 
     protected WebDriver driver;
 
@@ -18,11 +18,17 @@ public class CheckOut {
     @FindBy(name="postalCode")
     private WebElement postalCodeInput;
 
-    public CheckOut(WebDriver driver){
+    @FindBy(id = "continue")
+    private WebElement btnContinue;
+
+    @FindBy(id = "finish")
+    private WebElement btnFinish;
+
+    public CheckOutPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    public void informationInput(String firstName, String lastName, int postalCode){
+    public void informationInput(String firstName,String lastName,String postalCode){
         firstNameInput.clear();
         firstNameInput.sendKeys(firstName);
 
@@ -32,6 +38,8 @@ public class CheckOut {
         postalCodeInput.clear();
         postalCodeInput.sendKeys(postalCode);
 
+        btnContinue.click();
+        btnFinish.click();
 
     }
 }
