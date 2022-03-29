@@ -8,6 +8,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -40,6 +41,7 @@ public class CheckingOut extends TestUtil {
             btnCheckOut.click();
             CheckOutPage checkingOut=new CheckOutPage(driver);
             checkingOut.informationInput("Geogi","Karpovchanski","8000");
-
+            WebElement btnBackHome= driver.findElement(By.name("back-to-products"));
+            Assert.assertTrue(btnBackHome.isDisplayed());
         }
     }
