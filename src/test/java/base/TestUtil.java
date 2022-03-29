@@ -13,7 +13,6 @@ public class TestUtil {
 
     public WebDriver driver;
     private String applicationUrl, browser;
-    private int implicitWaitSeconds;
 
 
     @BeforeMethod

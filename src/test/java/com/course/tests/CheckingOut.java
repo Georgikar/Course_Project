@@ -31,17 +31,22 @@ public class CheckingOut extends TestUtil {
     }
         @Test(dataProvider = "userList")
         public void checkOut (String userName, String password){
+
             LoginPage loginPage = new LoginPage(driver);
             ProductsPage productPage = loginPage.login(userName, password);
             productPage.addToCartByProductName("bolt-t-shirt");
             productPage.addToCartByProductName("onesie");
+
             WebElement btnShoppingCart = driver.findElement(By.className("shopping_cart_link"));
             btnShoppingCart.click();
+
             WebElement btnCheckOut = driver.findElement(By.id("checkout"));
             btnCheckOut.click();
+
             CheckOutPage checkingOut=new CheckOutPage(driver);
             checkingOut.informationInput("Geogi","Karpovchanski","8000");
             WebElement btnBackHome= driver.findElement(By.name("back-to-products"));
+
             Assert.assertTrue(btnBackHome.isDisplayed());
         }
     }

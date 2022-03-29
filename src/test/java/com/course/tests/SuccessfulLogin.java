@@ -31,6 +31,7 @@ public class SuccessfulLogin extends TestUtil {
     }
     @Test(dataProvider = "userList")
     public void successfulLogin(String userName, String password)   {
+
         LoginPage loginPage = new LoginPage(driver);
         ProductsPage productPage = loginPage.login(userName,password);
 
