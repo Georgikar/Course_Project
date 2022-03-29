@@ -1,21 +1,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite thread-count="2" verbose="1" name="QA Automation course"
-       annotations="JDK" parallel="classes">
+       annotations="JDK" parallel="tests">
 
-    <test name="First Test Suite">
+    <test name="Login">
         <classes>
             <class name="com.course.tests.SuccessfulLogin"/>
         </classes>
     </test>
-    <test name="JS executor">
+    <test name="AddingItems">
         <classes>
             <class name="com.course.tests.AddingItems"/>
         </classes>
     </test>
-    <!--    <test name="Wait Test">-->
-    <!--        <classes>-->
-    <!--            <class name="com.selenium.course.tests.WaitTest"/>-->
-    <!--        </classes>-->
-    <!--    </test>-->
+
 </suite>
