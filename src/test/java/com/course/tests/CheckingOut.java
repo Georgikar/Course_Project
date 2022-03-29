@@ -39,7 +39,7 @@ public class CheckingOut extends TestUtil {
             WebElement btnCheckOut = driver.findElement(By.id("checkout"));
             btnCheckOut.click();
             CheckOutPage checkingOut=new CheckOutPage(driver);
-
+            checkingOut.informationInput("Geogi","Karpovchanski","8000");
 
         }
     }
