@@ -23,8 +23,6 @@ public class CheckingOut extends TestUtil {
         try (CSVReader csvReader = new CSVReader(new FileReader("src/test/resources/userList.csv"))) {
             List<String[]> csvData = csvReader.readAll();
             Object[][] csvDataObject = new Object[csvData.size()][2];
-	@FindBy(css="")
-	private WebElement webElement;
             for (int i = 0; i < csvData.size(); i++) {
                 csvDataObject[i] = csvData.get(i);
             }
