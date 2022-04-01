@@ -38,7 +38,6 @@ public class TestUtil {
             Properties config = new Properties();
             config.load(configFile);
             applicationUrl = config.getProperty("url");
-            //implicitWaitSeconds = Integer.parseInt(config.getProperty("implicitWait"));
             browser = config.getProperty("targetBrowser");
 
         } catch (IOException e) {
