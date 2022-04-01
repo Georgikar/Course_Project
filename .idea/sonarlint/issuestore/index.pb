@@ -3,15 +3,9 @@
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 ^
 .JAVA_Intro/.idea/sonarlint/issuestore/index.pb,4\4\44cbb78c419b786d68aefb6c735c3646c97e175a
-U
-%src/main/java/Pages/CheckOutPage.java,a\9\a901358f44ec91e61ca68cb927145c7d66731b1d
 R
 "src/main/java/Utils/HelperCsv.java,3\f\3f451a5f53f5b1ce1300513ab85fb2d99f2926e8
-U
-%src/main/java/Pages/ProductsPage.java,3\6\36e42e7b0ee7af44d699171e8804a7b48fd45429
 W
 'src/main/java/Driver/DriverFactory.java,5\9\593d3701ab4a6cf71b8f1f1c8b592dbf01a7c69f
 P
  src/test/java/base/TestUtil.java,5\9\59d9ef061498841be504356267b8ae8810e418b8
-G
-src/test/suits/suit.xml,6\9\69acf29078de17304c635b2d64b63e81221224df

@@ -44,7 +44,7 @@ public class CheckingOut extends TestUtil {
             btnCheckOut.click();
 
             CheckOutPage checkingOut=new CheckOutPage(driver);
-            checkingOut.informationInput("Geogi","Karpovchanski","8000");
+            checkingOut.informationInput("Georgi","Karpovchanski","8000");
             WebElement btnBackHome= driver.findElement(By.name("back-to-products"));
 
             Assert.assertTrue(btnBackHome.isDisplayed());
